@@ -1,0 +1,41 @@
+.theme-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+}
+
+.theme-toggle-track {
+  display: flex;
+  align-items: center;
+  width: 52px;
+  height: 30px;
+  padding: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--border-strong);
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.theme-toggle-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #06120e;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-slow), background var(--transition);
+}
+
+[data-theme='dark'] .theme-toggle-thumb {
+  transform: translateX(22px);
+  background: linear-gradient(135deg, var(--gold), var(--accent-2));
+}
+
+.theme-toggle:hover .theme-toggle-track {
+  border-color: var(--accent);
+}
